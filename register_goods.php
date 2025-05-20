@@ -11,6 +11,9 @@
         <h2>Register Goods</h2>
 
         <?php
+        // Include the configuration file
+        include 'config.php';
+        
         // Check if form is submitted
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Capture the form data
@@ -24,14 +27,6 @@
             $invoice_number = $_POST['invoice_number'];
             $authorised_by = $_POST['authorised_by'];
 
-            // Database connection
-            $conn = new mysqli('localhost', 'root', '', 'emzor_goods_outward_register');
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
             // Insert data into the sent_goods table
             $sql = "INSERT INTO sent_goods (date, sender_location, sender_name, receiver_location, receiver_name, total_quantity, description, invoice_number, authorised_by) 
                     VALUES ('$date', '$sender_location', '$sender_name', '$receiver_location', '$receiver_name', '$total_quantity', '$description', '$invoice_number', '$authorised_by')";
@@ -41,9 +36,6 @@
             } else {
                 echo "<p>Error: " . $sql . "<br>" . $conn->error . "</p>";
             }
-
-            // Close the connection
-            $conn->close();
         }
         ?>
 

@@ -14,6 +14,7 @@
         <?php
         // Start the session to manage user login states
         session_start();
+        include 'config.php'; // Include the config file for database connection
 
         // Check if the login form has been submitted
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -21,14 +22,6 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
             $role = $_POST['role'];
-
-            // Create a new database connection
-            $conn = new mysqli('localhost', 'root', '', 'emzor_goods_outward_register');
-
-            // Check if the connection was successful
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error); // Stop the script and show error
-            }
 
             // Prepare an SQL statement to fetch user data based on username and role
             $sql = $conn->prepare("SELECT * FROM users WHERE username = ? AND role = ?");
@@ -59,9 +52,6 @@
                 // Display an error message if no user is found with the given credentials
                 echo "<p>User not found or incorrect role selected. Please try again.</p>";
             }
-
-            // Close the database connection
-            $conn->close();
         }
         ?>
 

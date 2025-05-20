@@ -1,8 +1,8 @@
 -- Create Database
-CREATE DATABASE IF NOT EXISTS emzor_goods_outward_register;
+CREATE DATABASE IF NOT EXISTS ${DB_NAME};
 
 -- Use the Database
-USE emzor_goods_outward_register;
+USE ${DB_NAME};
 
 -- Create User Table for Authentication
 CREATE TABLE users (
@@ -28,5 +28,5 @@ CREATE TABLE sent_goods (
 
 -- Insert Default Users
 INSERT INTO users (username, password, role) VALUES 
-('admin_username', '$2y$10$/P.OjKt7DQsOjXq0Sy.jLOUJXCti2H59atNhrUJieGrvMn.buOni.', 'Administrator'),
-('user_username', '$2y$10$lkQKXtXQhGlpRBKDBx3hYuerSoKwM/Tt0cjt2ZIJE.vGWfH1jid3m', 'GOB_User');
+('${ADMIN_USERNAME}', '${ADMIN_PASSWORD_HASH}', 'Administrator'),
+('${USER_USERNAME}', '${USER_PASSWORD_HASH}', 'GOB_User');
