@@ -1,6 +1,9 @@
-# Emzor Goods Outward Register
+# Goods Outward Register System
 
-A web-based application for managing and tracking outgoing goods at Emzor Pharmaceutical Industries. This system allows users to register, track, and manage goods being sent out from different locations.
+A web application developed during an internship at Emzor Pharmaceutical Industries that enables secure tracking and management of outgoing goods through role-based access control, allowing administrators and users to register, monitor, and maintain records of dispatched items from various locations.
+
+## Disclaimer
+This project was developed as part of an internship learning experience and is not currently in production use. It serves as a demonstration of web development skills and understanding of inventory management systems.
 
 ## Features
 
@@ -122,17 +125,17 @@ USER_USERNAME=user_username
 USER_PASSWORD_HASH=hashed_password
 ```
 
-## Development
+## Customization and Usage
 
-Project developed by Gerard Uzodinma as part of ICT Internship at Emzor Pharmaceutical Industries.
+This project is open for customization and implementation in both personal and organizational settings. The system can be adapted to various use cases such as inventory management, goods tracking, or similar applications. The well-structured codebase allows for easy modifications while maintaining robust security practices.
+
+## Development Context
+
+This project was developed by Gerard Uzodinma as part of an ICT internship learning experience. While initially conceived during an internship at Emzor Pharmaceutical Industries, it has been generalized to serve as a template that any organization can adapt for their goods management needs.
 
 ## License
 
 © 2024 ICT Intern Project by Gerard Uzodinma. All Rights Reserved.
-
-## Customization and Usage
-
-This project is open for customization and implementation in both personal and organizational settings. The system can be adapted to various use cases such as inventory management, goods tracking, or similar applications. The well-structured codebase allows for easy modifications while maintaining robust security practices.
 
 ## Security Note
 
