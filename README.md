@@ -130,6 +130,10 @@ Project developed by Gerard Uzodinma as part of ICT Internship at Emzor Pharmace
 
 © 2024 ICT Intern Project by Gerard Uzodinma. All Rights Reserved.
 
+## Customization and Usage
+
+This project is open for customization and implementation in both personal and organizational settings. The system can be adapted to various use cases such as inventory management, goods tracking, or similar applications. The well-structured codebase allows for easy modifications while maintaining robust security practices.
+
 ## Security Note
 
 Remember to:
